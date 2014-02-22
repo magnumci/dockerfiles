@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Get rid of all images and containers
+./cleanup
+
+# Terminate on failures
+set -e
+
+# Build base image first
+./build base
+
+# Build base-dependent images
+./build beanstalkd
+./build couchdb
+./build elasticsearch
+./build memcached
+./build mongodb
+./build postgresql
+./build rabbitmq
+./build redis
