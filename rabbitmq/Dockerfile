@@ -11,7 +11,7 @@ RUN wget http://www.rabbitmq.com/rabbitmq-signing-key-public.asc
 RUN apt-key add rabbitmq-signing-key-public.asc && rm rabbitmq-signing-key-public.asc
 RUN apt-get update
 
-# Install erlang
+# Install rabbitmq server package
 RUN apt-get install -y rabbitmq-server
 
 # Expose server port
