@@ -25,6 +25,9 @@ RUN apt-get install -y \
   build-essential \
   checkinstall \
   openssl \
+  ncurses-dev \
+  zlib1g \
+  zlib1g-dev \
   libssl1.0.0 \
   libssl-dev \
   libcurl4-openssl-dev \
@@ -39,10 +42,7 @@ RUN apt-get install -y \
   libxml2-dev \
   libxslt-dev \ 
   libxslt1-dev \
-  libyaml-dev \
-  ncurses-dev \
-  zlib1g \ 
-  zlib1g-dev
+  libyaml-dev
 
 # Install extras
 RUN apt-get install -y \
