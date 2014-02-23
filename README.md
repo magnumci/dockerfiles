@@ -38,7 +38,7 @@ vagrant up
 vagrant ssh
 ```
 
-Project directly is automatically mapped to `/dockerfiles` directly. 
+Project directory is automatically mapped to `/dockerfiles` directly. 
 
 To build all available images run:
 
