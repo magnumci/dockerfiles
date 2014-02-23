@@ -58,7 +58,7 @@ RUN apt-get install -y xserver-xorg-core x11vnc xvfb
 ADD xvfb.sh /etc/init.d/xvfb
 
 # Install phantom.js
-RUN wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-linux-x86_64.tar.bz2
+RUN wget -q https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-linux-x86_64.tar.bz2
 RUN tar -xjf phantomjs-1.9.7-linux-x86_64.tar.bz2
 RUN cp phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/local/bin/phantomjs
 RUN rm -rf phantomjs-*
@@ -70,13 +70,13 @@ RUN apt-get install -y imagemagick libmagick++-dev
 RUN ln -s /bin/true /bin/sendmail
 
 # Install wkhtmltopdf
-RUN wget https://wkhtmltopdf.googlecode.com/files/wkhtmltopdf-0.11.0_rc1-static-amd64.tar.bz2
+RUN wget -q https://wkhtmltopdf.googlecode.com/files/wkhtmltopdf-0.11.0_rc1-static-amd64.tar.bz2
 RUN tar -xvf wkhtmltopdf-0.11.0_rc1-static-amd64.tar.bz2
 RUN mv wkhtmltopdf-amd64 /usr/local/bin/wkhtmltopdf
 RUN rm -f wkhtmltopdf*
 
 # Install bunch
-RUN wget -O /usr/bin/bunch https://github.com/magnumci/bunch/releases/download/v0.1.1/bunch_linux_amd64
+RUN wget -q -O /usr/bin/bunch https://github.com/magnumci/bunch/releases/download/v0.1.1/bunch_linux_amd64
 RUN chmod +x /usr/bin/bunch
 
 # Install Heroku toolbelt
