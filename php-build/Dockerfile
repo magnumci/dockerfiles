@@ -25,3 +25,6 @@ RUN apt-get install -y \
 # Install PHP build
 RUN git clone git://github.com/CHH/php-build
 RUN cd php-build && ./install.sh
+
+# Remove repository
+RUN rm -rf ./php-build
