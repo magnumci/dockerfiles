@@ -9,6 +9,7 @@ Build docker images for Magnum CI
 - Ruby: 1.9.2, 1.9.3, 2.0.0, 2.1.0
 - Node.js: 0.8, 0.10, 0.11
 - Go: 1.1.2, 1.2
+- PHP: 5.3, 5.4, 5.5
 
 **Databases, key-value stores and search engines:**
 
