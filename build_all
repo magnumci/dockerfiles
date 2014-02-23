@@ -18,3 +18,9 @@ set -e
 ./build postgresql
 ./build rabbitmq
 ./build redis
+
+# Build generic image
+./build generic
+
+# Build generic-dependent images
+# TODO
