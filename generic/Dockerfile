@@ -47,6 +47,8 @@ RUN apt-get install -y \
 # Install extras
 RUN apt-get install -y \
   sqlite3 \
+  libmysqlclient-dev \
+  libpq-dev \
   libsqlite3-dev \
   libqt4-dev \
   freetds-dev \
