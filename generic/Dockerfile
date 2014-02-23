@@ -81,3 +81,13 @@ RUN chmod +x /usr/bin/bunch
 
 # Install Heroku toolbelt
 RUN wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+
+# Setup magnum user
+RUN useradd -m -d /home/magnum -s /bin/bash -U magnum
+RUN echo magnum:magnum | chpasswd
+RUN mkdir -p /home/magnum/.ssh
+RUN touch /home/magnum/.ssh/authorized_keys
+RUN chmod 700 /home/magnum/.ssh
+RUN chmod 600 /home/magnum/.ssh/*
+RUN chown -R magnum:magnum /home/magnum
+RUN echo "magnum ALL=NOPASSWD: ALL" >> /etc/sudoers
