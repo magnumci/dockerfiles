@@ -22,5 +22,18 @@ set -e
 # Build generic image
 ./build generic
 
-# Build generic-dependent images
-# TODO
+# Build go images
+docker build -rm=true -t magnum/go1.1.2 ./go/1.1.2
+docker build -rm=true -t magnum/go1.2 ./go/1.2
+
+# Build ruby images
+docker build -rm=true -t magnum/ruby1.9.2 ./ruby/1.9.2
+docker build -rm=true -t magnum/ruby1.9.3 ./ruby/1.9.3
+docker build -rm=true -t magnum/ruby2.0.0 ./ruby/2.0.0
+docker build -rm=true -t magnum/ruby2.1.0 ./ruby/2.1.0
+
+# Build php images
+docker build -rm=true -t magnum/php-build ./php-build
+docker build -rm=true -t magnum/php5.3 ./php/5.3
+docker build -rm=true -t magnum/php5.4 ./php/5.4
+docker build -rm=true -t magnum/php5.5 ./php/5.5
