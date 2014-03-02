@@ -4,6 +4,7 @@
 $script = <<SCRIPT
 apt-get update -y
 apt-get install -y linux-image-generic-lts-raring linux-headers-generic-lts-raring
+apt-get install -y git-core
 curl -s https://get.docker.io/ubuntu/ | sudo sh
 date > /etc/vagrant_provisioned_at
 SCRIPT
